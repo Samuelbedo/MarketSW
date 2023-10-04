@@ -53,7 +53,7 @@ namespace Market.API.Controllers
         public async Task<IActionResult> Put(Country country)
         {
             _context.Update(country);
-            await _context.SaveChangesAsync();//guarda en la tabla los datos
+            await _context.SaveChangesAsync();
             return Ok(country);
         }
 

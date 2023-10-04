@@ -14,6 +14,8 @@ namespace Market.Shared.Entities
         [MaxLength (100,ErrorMessage = "El campo {0} puede tener maximo {1} " +
             "caracteres")]//longitud maxima del mensaje
         [Required(ErrorMessage ="El campo {0} es obligatorio")]
-        public string? Name { get; set; }    
+        public string? Name { get; set; }
+
+        public ICollection<State> States { get; set; }//muchos states
     }
 }
